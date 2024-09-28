@@ -12,6 +12,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Customize to your needs...
+export PATH=${PATH}:$HOME/.local/bin:$HOME/go/bin
+
 # Load shared zsh configs
 if [[ -s "${ZDOTDIR:-$HOME}/.config/zprezto/common.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.config/zprezto/common.zsh"
@@ -21,9 +24,6 @@ fi
 if [[ -s "${ZDOTDIR:-$HOME}/.config/zprezto/specific.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.config/zprezto/specific.zsh"
 fi
-
-# Customize to your needs...
-export PATH=${PATH}:$HOME/.local/bin:$HOME/go/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
